@@ -7,7 +7,7 @@ import logo from './EC-website-final-logo-removebg-preview.png';
 const Navbar = () => {
   return (
     <main>
-      <nav className='flex justify-evenly bg-zinc-900 text-white text-sm fixed top-0 right-0 left-0'>
+      <nav className='flex justify-evenly bg-zinc-900 text-white text-sm fixed top-0 right-0 left-0 z-10' >
         <div className='flex p-0'>
           <div className=' flex p-5 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
             <FaHome className='mr-3 text-lg'/>

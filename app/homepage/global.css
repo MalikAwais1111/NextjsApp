@@ -64,4 +64,12 @@
     color: black;
     border: 1px solid black;
   }
+  .hover-up {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hover-up:hover {
+    transform: translateY(-10px);
+  }
+  
   
