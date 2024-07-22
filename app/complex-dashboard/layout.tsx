@@ -14,7 +14,7 @@ const ComplexDashboard = ({
     notifications: React.ReactNode
     login: React.ReactNode
 }) => {
-  const islogedin = false
+  const islogedin = true
   return islogedin ? (
     <div className="min-h-screen bg-gray-100 p-4">
       <div className="mb-4">
