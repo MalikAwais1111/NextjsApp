@@ -11,7 +11,7 @@ const Topproducts = () => {
         <div className='text-4xl font-medium text-black'>Our Hot Products</div>
       </div>
       <div className='mt-20 mb-10 flex-wrap flex justify-center m-10'>
-        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2'>
+        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2 hover-up'>
           <div className='relative w-full pb-[100%]'>
             <Image
               className='absolute inset-0 object-cover object-center'
@@ -23,7 +23,7 @@ const Topproducts = () => {
           <div className='flex justify-center m-3 text-2xl text-black from-neutral-800'>iphone X R</div>
           <div className='flex justify-center text-rose-600'>700$</div>
         </Card>
-        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2'>
+        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2 hover-up'>
           <div className='relative w-full pb-[100%]'>
             <Image
               className='absolute inset-0 object-cover object-center'
@@ -35,7 +35,7 @@ const Topproducts = () => {
           <div className='flex justify-center m-3 text-2xl text-black from-neutral-800'>iphone 11 Pro</div>
           <div className='flex justify-center text-rose-600'>679$</div>
         </Card>
-        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2'>
+        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2 hover-up'>
           <div className='relative w-full pb-[100%]'>
             <Image
               className='absolute inset-0 object-cover object-center'
@@ -47,7 +47,7 @@ const Topproducts = () => {
           <div className='flex justify-center m-3 text-2xl text-black from-neutral-800'>iMac</div>
           <div className='flex justify-center text-rose-600'>1099$</div>
         </Card>
-        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2'>
+        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2 hover-up'>
           <div className='relative w-full pb-[100%]'>
             <Image
               className='absolute inset-0 object-cover object-center'
@@ -61,7 +61,7 @@ const Topproducts = () => {
         </Card>
       </div>
       <div className=' mb-24 flex-wrap flex justify-center m-10'>
-        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2'>
+        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2 hover-up'>
           <div className='relative w-full pb-[100%]'>
             <Image
               className='absolute inset-0 object-cover object-center'
@@ -73,7 +73,7 @@ const Topproducts = () => {
           <div className='flex justify-center m-3 text-2xl text-black from-neutral-800'>Sony Speaker</div>
           <div className='flex justify-center text-rose-600'>305$</div>
         </Card>
-        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2'>
+        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2 hover-up'>
           <div className='relative w-full pb-[100%]'>
             <Image
               className='absolute inset-0 object-cover object-center'
@@ -85,7 +85,7 @@ const Topproducts = () => {
           <div className='flex justify-center m-3 text-2xl text-black from-neutral-800'>MacBook Pro</div>
           <div className='flex justify-center text-rose-600'>1250$</div>
         </Card>
-        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2'>
+        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2 hover-up'>
           <div className='relative w-full pb-[100%]'>
             <Image
               className='absolute inset-0 object-cover object-center'
@@ -97,7 +97,7 @@ const Topproducts = () => {
           <div className='flex justify-center m-3 text-2xl text-black from-neutral-800'>Surface Book</div>
           <div className='flex justify-center text-rose-600'>1599.99$</div>
         </Card>
-        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2'>
+        <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2 hover-up'>
           <div className='relative w-full pb-[100%]'>
             <Image
               className='absolute inset-0 object-cover object-center'
