@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <main>
-      <nav className='flex items-center justify-between bg-zinc-900 text-white text-sm fixed top-0 right-0 left-0 z-10'>
+      <nav className='flex items-center justify-between bg-zinc-900 text-white text-sm fixed top-0 right-0 left-0 z-10 p-4'>
         {/* Burger Menu Icon */}
         <button
           className='md:hidden text-xl'
@@ -24,33 +24,33 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className={`flex-grow justify-evenly md:flex md:items-center md:space-x-6 lg:space-x-8 ${isMenuOpen ? 'block' : 'hidden md:block'}`}>
-          <div className='flex flex-col md:flex-row  '>
+          <div className='flex flex-col md:flex-row'>
             <Link href='/'>
               <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
                 <FaHome className='mr-2 text-lg'/>
-                <span className='hidden md:inline p-3'>Home pages</span>
+                <span className='hidden md:inline'>Home pages</span>
                 <span className='ml-1 text-xs'>&#x25BC;</span>
               </div>
             </Link>
             <Link href='/products'>
               <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
-              <span className='hidden md:inline p-3'>Products</span>
+                Products
                 <span className='ml-1 text-xs'>&#x25BC;</span>
               </div>
             </Link>
             <Link href='/cart'>
               <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
-              <span className='hidden md:inline p-3'>Cart</span>
+                Cart
               </div>
             </Link>
             <Link href='/about'>
               <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
-              <span className='hidden md:inline p-3'>About</span>
+                About
               </div>
             </Link>
             <Link href='/sales'>
               <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
-              <span className='hidden md:inline p-3'>Sales?</span>
+                Sales?
               </div>
             </Link>
           </div>
@@ -58,7 +58,7 @@ const Navbar = () => {
           {/* Search Bar */}
           <div className='relative w-full md:w-auto mt-2 md:mt-0'>
             <input
-              className='pr-10 p-3 bg-gray-950 text-sm border-none focus:outline-none input-field w-full'
+              className='pr-10 p-2 bg-gray-950 text-sm border-none focus:outline-none input-field w-full'
               type='text'
               placeholder='Search'
             />
@@ -69,12 +69,12 @@ const Navbar = () => {
           <div className='flex items-center space-x-4 md:space-x-6 mt-2 md:mt-0'>
             <Link href='/login'>
               <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
-              <span className='hidden md:inline p-3'>Login</span>
+                Login
               </div>
             </Link>
             <Link href='/signup'>
               <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
-              <span className='hidden md:inline p-3'>SignUp</span>
+                Signup
               </div>
             </Link>
           </div>
@@ -120,11 +120,11 @@ const Navbar = () => {
               Login
             </div>
           </Link>
-          <Link href='/signup'>
+          {/* <Link href='/signup'>
             <div className='py-2 border-b border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
               Signup
             </div>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </main>
