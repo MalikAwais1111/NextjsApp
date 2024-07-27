@@ -1,20 +1,27 @@
 import React from 'react';
+import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import Skeleton from '@mui/material/Skeleton';
 
-const Loader = () => {
+const SkeletonLoader = () => {
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-50 z-50">
-      <div className="animate-pulse flex flex-col items-center gap-4 w-60 bg-white p-4 rounded-lg shadow-lg">
-        <div>
-          <div className="w-full h-6 bg-gray-300 rounded-md"></div>
-          <div className="w-full h-4 bg-gray-300 mx-auto mt-3 rounded-md"></div>
-        </div>
-        <div className="h-7 bg-gray-300 w-full rounded-md"></div>
-        <div className="h-7 bg-gray-300 w-full rounded-md"></div>
-        <div className="h-7 bg-gray-300 w-full rounded-md"></div>
-        <div className="h-7 bg-gray-300 w-1/2 rounded-md"></div>
-      </div>
-    </div>
+    <Grid container spacing={4}>
+      {[...Array(8)].map((_, index) => (
+        <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+          <Card>
+            <Skeleton variant="rectangular" height={140} />
+            <CardContent>
+              <Typography variant="h5">
+                <Skeleton />
+              </Typography>
+              <Typography variant="subtitle1">
+                <Skeleton width="60%" />
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      ))}
+    </Grid>
   );
-}
+};
 
-export default Loader;
+export default SkeletonLoader;

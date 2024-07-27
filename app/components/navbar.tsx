@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FaHome, FaBars, FaTimes } from 'react-icons/fa';
 import Image from 'next/image';
+import Dropdown from './dropdown';
+import { DropdownItem } from './dropdown';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,10 +12,16 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const products: DropdownItem[]=[
+    { href: '/products/laptops', label: 'Laptops' },
+    { href: '/products/mobile-accessories', label: 'Mobile Accessories' },
+    { href: '/products/smartphones', label: 'Smart Phones' },
+    // Add more products as needed
+  ];
 
   return (
     <main>
-      <nav className='flex items-center justify-between bg-zinc-900 text-white text-sm fixed top-0 right-0 left-0 z-10 p-4'>
+      <nav className='flex items-center justify-between bg-zinc-900 text-white text-sm fixed top-0 right-0 left-0 z-10'>
         {/* Burger Menu Icon */}
         <button
           className='md:hidden text-xl'
@@ -28,29 +36,26 @@ const Navbar = () => {
             <Link href='/'>
               <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
                 <FaHome className='mr-2 text-lg'/>
-                <span className='hidden md:inline'>Home pages</span>
-                <span className='ml-1 text-xs'>&#x25BC;</span>
+                <span className='hidden md:inline p-3'>Home pages</span>
+                {/* <span className='ml-1 text-xs'>&#x25BC;</span> */}
               </div>
             </Link>
-            <Link href='/products'>
-              <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
-                Products
-                <span className='ml-1 text-xs'>&#x25BC;</span>
-              </div>
-            </Link>
+            <div className='flex items-center border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
+              {<Dropdown title="Products" items={products} />}
+            </div>
             <Link href='/cart'>
-              <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
-                Cart
+              <div className='flex items-center border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
+                <span className='p-5'>Cart</span>
               </div>
             </Link>
             <Link href='/about'>
               <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
-                About
+                <span className='p-3'>About</span>
               </div>
             </Link>
             <Link href='/sales'>
               <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
-                Sales?
+                <span className='p-3'>Sales?</span>
               </div>
             </Link>
           </div>
