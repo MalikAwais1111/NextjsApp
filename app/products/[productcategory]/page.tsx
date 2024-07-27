@@ -42,7 +42,7 @@ const Productid = ({ params }: { params: { productcategory: string } }) => {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  },[params.productcategory]);
 
   if (loading) return <p><SkeletonLoader/></p>;
   if (error) return <p>Error: {error}</p>;
