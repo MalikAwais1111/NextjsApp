@@ -12,7 +12,8 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const products: DropdownItem[]=[
+
+  const products: DropdownItem[] = [
     { href: '/products/laptops', label: 'Laptops' },
     { href: '/products/mobile-accessories', label: 'Mobile Accessories' },
     { href: '/products/smartphones', label: 'Smart Phones' },
@@ -37,11 +38,10 @@ const Navbar = () => {
               <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
                 <FaHome className='mr-2 text-lg'/>
                 <span className='hidden md:inline p-3'>Home pages</span>
-                {/* <span className='ml-1 text-xs'>&#x25BC;</span> */}
               </div>
             </Link>
             <div className='flex items-center border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
-              {<Dropdown title="Products" items={products} />}
+              <Dropdown title="Products" items={products} onitemClick={toggleMenu} />
             </div>
             <Link href='/cart'>
               <div className='flex items-center border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
@@ -125,11 +125,6 @@ const Navbar = () => {
               Login
             </div>
           </Link>
-          {/* <Link href='/signup'>
-            <div className='py-2 border-b border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
-              Signup
-            </div>
-          </Link> */}
         </div>
       </div>
     </main>

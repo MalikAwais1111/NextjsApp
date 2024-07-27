@@ -9,9 +9,10 @@ export interface DropdownItem {
 interface DropdownProps {
   title: string;
   items: DropdownItem[];
+  onitemClick?: () => void;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ title, items }) => {
+const Dropdown: React.FC<DropdownProps> = ({ title, items, onitemClick }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -38,7 +39,12 @@ const Dropdown: React.FC<DropdownProps> = ({ title, items }) => {
         <ul className='p-2'>
           {items.map((item, index) => (
             <li key={index} className='p-2 hover:bg-gray-200 rounded-md'>
-              <Link onClick={handleMouseLeave} href={item.href}>
+              <Link 
+                href={item.href}
+                onClick={() => {
+                  if (onitemClick) onitemClick(), handleMouseLeave(); // Call onitemClick if provided
+                }}
+              >
                 <p className='text-black'>{item.label}</p>
               </Link>
             </li>
