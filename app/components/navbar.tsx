@@ -35,9 +35,9 @@ const Navbar = () => {
         <div className={`flex-grow justify-evenly md:flex md:items-center md:space-x-6 lg:space-x-8 ${isMenuOpen ? 'block' : 'hidden md:block'}`}>
           <div className='flex flex-col md:flex-row'>
             <Link href='/'>
-              <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
+              <div onClick={toggleMenu} className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
                 <FaHome className='mr-2 text-lg'/>
-                <span className='hidden md:inline p-3'>Home pages</span>
+                <span className='md:inline p-3'>Home pages</span>
               </div>
             </Link>
             <div className='flex items-center border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
