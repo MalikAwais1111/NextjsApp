@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import '../global.css'
 
 const Carosal = () => {
@@ -10,7 +11,7 @@ const Carosal = () => {
           <div className='trending'>Trending products for sale!</div>
           <div className='off'>50% OFF</div>
           <div className='shopnow'>
-            <button>Shop Now</button>
+            <button><Link  href={'/products'}>Shop Now</Link></button>
           </div>
         </div>
     </div>

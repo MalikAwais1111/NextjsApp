@@ -41,7 +41,7 @@ const ViewportComponent = () => {
               <span className='absolute left-0 bottom-[-1px] h-[1px] w-[60px] bg-red-500'></span>
             </div>
             <div className='pt-10 pb-3 cursor-pointer group'>
-              <Link href={''}>
+              <Link href={'/about'}>
                 <span className='relative text-white group-hover:text-red-500 transition-colors duration-300'>
                   About Us
                   <span className='absolute left-0 bottom-[-1px] h-[1px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full'></span>

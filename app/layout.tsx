@@ -3,6 +3,7 @@ import { Rubik } from "next/font/google";
 import '../app/globals.css'
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import ReactQueryProvider from "./utils/providers/page";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -26,7 +27,9 @@ export default function RootLayout({
       </head>
       <body className={rubik.className}>
         <Navbar/>
+        <ReactQueryProvider>
         {children}
+        </ReactQueryProvider>
         <Footer/>
       </body>
     </html>
