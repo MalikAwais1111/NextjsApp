@@ -10,9 +10,11 @@ const Carosal = () => {
           <div className='latest'>Latest Best Devices</div>
           <div className='trending'>Trending products for sale!</div>
           <div className='off'>50% OFF</div>
-          <div className='shopnow'>
-            <button><Link  href={'/products'}>Shop Now</Link></button>
+          <Link href={'/products'}>
+          <div className='shopnow w-32'>
+            <button>Shop Now</button>
           </div>
+          </Link>
         </div>
     </div>
     </>

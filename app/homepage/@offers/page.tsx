@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from '@/app/components/card'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Offers = () => {
   return (
@@ -17,9 +18,11 @@ const Offers = () => {
         <div className='absolute flex top-10 left-14 flex-col justify-center align-middle'>
           <div className='text-black text-lg'>50% OFF</div>
           <div className='text-black text-3xl font-medium'>Smart Watch</div>
+          <Link href={'/products'}>
           <div className='shopnow w-32'>
             <button>Shop Now</button>
           </div>
+          </Link>
         </div>
       </Card>
       <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2'>
@@ -34,9 +37,11 @@ const Offers = () => {
         <div className='absolute flex top-10 left-14 flex-col justify-center align-middle'>
           <div className='text-black text-lg'>40% OFF</div>
           <div className='text-black text-3xl font-medium'>Mobile</div>
+          <Link href={'/products/smartphones'}>
           <div className='shopnow w-32'>
             <button>Shop Now</button>
           </div>
+          </Link>
         </div>
       </Card>
       <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2'>
@@ -51,9 +56,11 @@ const Offers = () => {
         <div className='absolute flex top-10 left-14 flex-col justify-center align-middle'>
           <div className='text-black text-lg'>30% OFF</div>
           <div className='text-black text-3xl font-medium'>Smart Device</div>
+          <Link href={'/products/mobile-accessories'}>
           <div className='shopnow w-32'>
             <button>Shop Now</button>
           </div>
+          </Link>
         </div>
       </Card>
       <Card className='relative w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%] m-2'>
@@ -68,9 +75,11 @@ const Offers = () => {
         <div className='absolute flex top-10 left-14 flex-col justify-center align-middle'>
           <div className='text-black text-lg'>20% OFF</div>
           <div className='text-black text-3xl font-medium'>Headphones</div>
+          <Link href={'/products/mobile-accessories'}>
           <div className='shopnow w-32'>
             <button>Shop Now</button>
           </div>
+          </Link>
         </div>
       </Card>
     </div>
