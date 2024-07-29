@@ -1,19 +1,15 @@
 import React, { ReactNode } from 'react';
+import Carosal from './@carosal/page';
+import Offers from './@offers/page';
+import Topproducts from './@topproducts/page';
 
-interface HomepageProps {
-  carosal: ReactNode;
-  topproducts: ReactNode;
-  offers: ReactNode;
-  children: ReactNode;
-}
-
-const Homepage: React.FC<HomepageProps> = ({ carosal, topproducts, offers, children }) => {
+const Homepage = () => {
   return (
     <div>
-      <div>{carosal}</div>
-      <div>{offers}</div>
-      <div>{topproducts}</div>
-      <div>{children}</div>
+      <div>{<Carosal/>}</div>
+      <div>{<Offers/>}</div>
+      <div>{<Topproducts/>}</div>
+      {/* // <div>{children}</div> */}
     </div>
   );
 };
