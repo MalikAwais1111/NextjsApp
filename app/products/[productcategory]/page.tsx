@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '@/app/components/productcard';
 import SkeletonLoader from '@/app/components/loader';
+import ButtonComponent from '@/app/components/button';
+import { useDispatch } from 'react-redux';
+import { addtocart } from '@/app/_liab/features/cardslice';
 
 
 interface Product {
@@ -44,8 +47,16 @@ const Productid = ({ params }: { params: { productcategory: string } }) => {
       });
   },[params.productcategory]);
 
+  const dispatch = useDispatch()
+
   if (loading) return <p><SkeletonLoader/></p>;
   if (error) return <p>Error: {error}</p>;
+
+  const handleAddToCart = (product: Product) => {
+    const { id, title, price } = product;
+    dispatch(addtocart({ id, title, price }));
+    alert("Added to cart");
+  };
 
   return (
     <div className='p-4 mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
@@ -60,7 +71,8 @@ const Productid = ({ params }: { params: { productcategory: string } }) => {
             price={`$${product.price}`}
             rating={product.rating}
             stock={product.stock}
-            thumbnail={product.thumbnail} // Pass the thumbnail prop
+            thumbnail={product.thumbnail}
+            button={<ButtonComponent onClick={()=>handleAddToCart(product)}>Buy now</ButtonComponent>}
           />
         ))
       )}

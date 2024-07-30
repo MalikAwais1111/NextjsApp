@@ -1,9 +1,12 @@
 'use client'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { fetchData } from '../apis/getdata'
 import SkeletonLoader from '../components/loader'
 import ProductCard from '../components/productcard'
+import ButtonComponent from '../components/button'
+import { addtocart } from '../_liab/features/cardslice'
+import { useDispatch } from 'react-redux'
 interface product {
   id: number;
   title: string;
@@ -11,7 +14,8 @@ interface product {
   price: number;
   rating: number;
   stock: number;
-  thumbnail: string; 
+  thumbnail: string;
+  button: ReactNode 
 }
 
 const Products = () => {
@@ -21,9 +25,16 @@ const Products = () => {
         queryFn: () => fetchData(url),
     });
 
+    const dispatch = useDispatch();
+
     if (isPending) return <SkeletonLoader/>;
     if (error) return <p>Error: {error.message}</p>;
 
+    const handleAddToCart = (product: product) => {
+      const { id, title, price } = product;
+      dispatch(addtocart({ id, title, price }));
+      alert("Added to cart");
+    };
   return (
     <div className='p-4 mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
       {data && data.length === 0 ? (
@@ -37,8 +48,9 @@ const Products = () => {
             price={`$${product.price}`}
             rating={product.rating}
             stock={product.stock}
-            thumbnail={product.thumbnail} // Pass the thumbnail prop
-          />
+            thumbnail={product.thumbnail} 
+            button={<ButtonComponent onClick={()=>handleAddToCart(product)}>Buy now</ButtonComponent>}
+            />
         ))
       )}
     </div>

@@ -4,6 +4,9 @@ import '../app/globals.css'
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import ReactQueryProvider from "./utils/providers/page";
+// import { Provider } from "react-redux";
+// import { store } from "./_liab/store";
+import { StoreProvider } from "./storeprovider";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -27,9 +30,11 @@ export default function RootLayout({
       </head>
       <body className={rubik.className}>
         <Navbar/>
+        <StoreProvider>
         <ReactQueryProvider>
         {children}
         </ReactQueryProvider>
+        </StoreProvider>
         <Footer/>
       </body>
     </html>
