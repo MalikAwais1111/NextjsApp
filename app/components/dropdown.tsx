@@ -38,14 +38,14 @@ const Dropdown: React.FC<DropdownProps> = ({ title, items, onitemClick }) => {
       >
         <ul className='p-2'>
           {items.map((item, index) => (
-            <li key={index} className='p-2 hover:bg-gray-200 rounded-md'>
+            <li key={index} className='p-0 hover:bg-gray-200 rounded-md'>
               <Link 
                 href={item.href}
                 onClick={() => {
                   if (onitemClick) onitemClick(), handleMouseLeave(); // Call onitemClick if provided
                 }}
               >
-                <p className='text-black'>{item.label}</p>
+                <p className='text-black p-3'>{item.label}</p>
               </Link>
             </li>
           ))}

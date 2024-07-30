@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { FaHome, FaBars, FaTimes } from 'react-icons/fa';
-import Image from 'next/image';
 import Dropdown from './dropdown';
 import { DropdownItem } from './dropdown';
 
@@ -44,12 +43,12 @@ const Navbar = () => {
               <Dropdown title="Products" items={products} onitemClick={toggleMenu} />
             </div>
             <Link href='/cart'>
-              <div className='flex items-center border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
+              <div onClick={toggleMenu} className='flex items-center border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
                 <span className='p-5'>Cart</span>
               </div>
             </Link>
             <Link href='/about'>
-              <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
+              <div onClick={toggleMenu} className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
                 <span className='p-3'>About</span>
               </div>
             </Link>
@@ -73,12 +72,12 @@ const Navbar = () => {
           {/* Authentication Links */}
           <div className='flex items-center space-x-4 md:space-x-6 mt-2 md:mt-0'>
             <Link href='/login'>
-              <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
+              <div onClick={toggleMenu} className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
                 Login
               </div>
             </Link>
             <Link href='/signup'>
-              <div className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
+              <div onClick={toggleMenu} className='flex items-center p-2 border-r border-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800'>
                 Signup
               </div>
             </Link>
@@ -87,7 +86,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Menu */}
-      <div className={`fixed inset-0 bg-zinc-900 bg-opacity-80 md:hidden transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} p-4`}>
+      {/* <div className={`fixed inset-0 bg-zinc-900 bg-opacity-80 md:hidden transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} p-4`}>
         <button
           className='text-white text-2xl mb-4'
           onClick={toggleMenu}
@@ -126,7 +125,7 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }

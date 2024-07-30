@@ -49,7 +49,7 @@ const ViewportComponent = () => {
               </Link>
             </div>
             <div className='pb-3 cursor-pointer group'>
-              <Link href={''}>
+              <Link href={'/products'}>
                 <span className='relative text-white group-hover:text-red-500 transition-colors duration-300'>
                   Shop Now!
                   <span className='absolute left-0 bottom-[-1px] h-[1px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full'></span>
@@ -57,7 +57,7 @@ const ViewportComponent = () => {
               </Link>
             </div>
             <div className='cursor-pointer group'>
-              <Link href={''}>
+              <Link href={'/cart'}>
                 <span className='relative text-white group-hover:text-red-500 transition-colors duration-300'>
                   Cart
                   <span className='absolute left-0 bottom-[-1px] h-[1px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full'></span>
@@ -72,7 +72,7 @@ const ViewportComponent = () => {
               <span className='absolute left-0 bottom-[-1px] h-[1px] w-[60px] bg-red-500'></span>
             </div>
             <div className='pt-10 pb-3 cursor-pointer group'>
-              <Link href={''}>
+              <Link href={'/signup'}>
                 <span className='relative text-white group-hover:text-red-500 transition-colors duration-300'>
                   Signup
                   <span className='absolute left-0 bottom-[-1px] h-[1px] w-0 bg-red-500 duration-300 group-hover:w-full'></span>
@@ -80,7 +80,7 @@ const ViewportComponent = () => {
               </Link>
             </div>
             <div className='pb-3 cursor-pointer group'>
-              <Link href={''}>
+              <Link href={'/login'}>
                 <span className='relative text-white group-hover:text-red-500 transition-colors duration-300'>
                   Login
                   <span className='absolute left-0 bottom-[-1px] h-[1px] w-0 bg-red-500 duration-300 group-hover:w-full'></span>
@@ -88,7 +88,7 @@ const ViewportComponent = () => {
               </Link>
             </div>
             <div className='cursor-pointer group'>
-              <Link href={''}>
+              <Link href={'/'}>
                 <span className='relative text-white group-hover:text-red-500 transition-colors duration-300'>
                   Home
                   <span className='absolute left-0 bottom-[-1px] h-[1px] w-0 bg-red-500 duration-300 group-hover:w-full'></span>

@@ -15,7 +15,7 @@ interface product {
 }
 
 const Products = () => {
-  const url = 'https://dummyjson.com/products/category/mens-watches';
+  const url = 'https://dummyjson.com/products/category/mobile-accessories';
     const { data, isPending, error } = useQuery({
         queryKey: ['alldata'],
         queryFn: () => fetchData(url),
