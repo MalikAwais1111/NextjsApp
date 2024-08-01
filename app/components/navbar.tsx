@@ -24,7 +24,7 @@ const Navbar = () => {
       <nav className='flex items-center justify-between bg-zinc-900 text-white text-sm fixed top-0 right-0 left-0 z-10'>
         {/* Burger Menu Icon */}
         <button
-          className='md:hidden text-xl'
+          className='md:hidden text-3xl'
           onClick={toggleMenu}
         >
           {isMenuOpen ? <FaTimes /> : <FaBars />}
