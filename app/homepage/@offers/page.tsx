@@ -18,7 +18,7 @@ const Offers = () => {
         <div className='absolute flex top-10 left-14 flex-col justify-center align-middle'>
           <div className='text-black text-lg'>50% OFF</div>
           <div className='text-black text-3xl font-medium'>Smart Watch</div>
-          <Link href={'/products'}>
+          <Link href={'/products/mens-watches'}>
           <div className='shopnow w-32'>
             <button>Shop Now</button>
           </div>
