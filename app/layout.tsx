@@ -29,8 +29,8 @@ export default function RootLayout({
         />
       </head>
       <body className={rubik.className}>
+      <StoreProvider>
         <Navbar/>
-        <StoreProvider>
         <ReactQueryProvider>
         {children}
         </ReactQueryProvider>
