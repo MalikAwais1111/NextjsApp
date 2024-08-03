@@ -40,6 +40,7 @@ const Navbar = () => {
   const handleSearch = () => {
     if (itemtosearch.trim()) {
       dispatch(searchitem(itemtosearch));
+      toggleMenu()
       router.push(`/product`);
     }
   };
