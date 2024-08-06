@@ -55,7 +55,6 @@ const Productid = ({ params }: { params: { productcategory: string } }) => {
   const handleAddToCart = (product: Product) => {
     const { id, title, price } = product;
     dispatch(addtocart({ id, title, price }));
-    alert("Added to cart");
   };
 
   return (
@@ -72,7 +71,7 @@ const Productid = ({ params }: { params: { productcategory: string } }) => {
             rating={product.rating}
             stock={product.stock}
             thumbnail={product.thumbnail}
-            button={<ButtonComponent onClick={()=>handleAddToCart(product)}>Buy now</ButtonComponent>}
+            button={<ButtonComponent onClick={()=>handleAddToCart(product)}>Add to cart</ButtonComponent>}
           />
         ))
       )}

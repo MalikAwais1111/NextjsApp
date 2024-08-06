@@ -33,7 +33,6 @@ const Products = () => {
     const handleAddToCart = (product: product) => {
       const { id, title, price } = product;
       dispatch(addtocart({ id, title, price }));
-      alert("Added to cart");
     };
   return (
     <div className='p-4 mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
@@ -49,7 +48,7 @@ const Products = () => {
             rating={product.rating}
             stock={product.stock}
             thumbnail={product.thumbnail} 
-            button={<ButtonComponent onClick={()=>handleAddToCart(product)}>Buy now</ButtonComponent>}
+            button={<ButtonComponent onClick={()=>handleAddToCart(product)}>Add to cart</ButtonComponent>}
             />
         ))
       )}
