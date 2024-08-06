@@ -83,26 +83,25 @@ const SearchedProducts = () => {
       )}
 
       <div>
-      <ReusableModal isOpen={isOpenModal} onClose={handleModalClose}>
-        <div className="p-6 bg-white rounded-lg shadow-lg">
-          <div className="mb-4 flex justify-center">
-            <h1 className=" md:text-xl font-semibold">Product added to cart</h1>
-          </div>
-          <div className="flex space-x-4 justify-center">
-            <div>
-              <button onClick={handleModalClose} className="md:text-base px-4 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-xs">
-                Continue Shopping
-              </button>
+        <ReusableModal isOpen={isOpenModal} onClose={handleModalClose}>
+          <div className="p-6 bg-white rounded-lg shadow-lg">
+            <div className="mb-4 flex justify-center">
+              <h1 className=" md:text-xl font-semibold">Product added to cart</h1>
             </div>
-            <div>
-              <ButtonComponent onClick={()=>router.push('/cart')} className='bg-green-600 hover:bg-green-700 py-2 transition-colors duration-300 ease-in-out text-xs md:text-base'>
-                View cart
-              </ButtonComponent>
+            <div className="flex space-x-4 justify-center">
+              <div>
+                <button onClick={handleModalClose} className="md:text-base px-4 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-xs">
+                  Continue Shopping
+                </button>
+              </div>
+              <div>
+                <ButtonComponent onClick={()=>router.push('/cart')} className='bg-green-600 hover:bg-green-700 py-2 transition-colors duration-300 ease-in-out text-xs md:text-base'>
+                  View cart
+                </ButtonComponent>
+              </div>
             </div>
           </div>
-        </div>
-      </ReusableModal>
-
+        </ReusableModal>
       </div>
     </div>
   )
