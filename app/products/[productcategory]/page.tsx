@@ -87,7 +87,7 @@ const Productid = ({ params }: { params: { productcategory: string } }) => {
       )}
       <div>
         <ReusableModal isOpen={isOpenModal} onClose={handleModalClose}>
-          <div className="p-6 bg-white rounded-lg shadow-lg">
+          <div className="p-2.5 md:p-6 bg-white rounded-lg shadow-lg">
             <div className="mb-4 flex justify-center">
               <h1 className=" md:text-xl font-semibold">Product added to cart</h1>
             </div>
