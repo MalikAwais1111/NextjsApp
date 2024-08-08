@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import Image from 'next/image';
 
 interface ProductCardProps {
   title: string;
@@ -21,7 +22,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
     <div className='border rounded-md shadow-lg overflow-hidden flex flex-col h-full'>
-      <img src={thumbnail} alt={title} className='w-full object-cover' />
+      <Image 
+        src={thumbnail} 
+        alt={title} 
+        width={500} 
+        height={500} 
+        className='w-full object-cover' 
+      />
       <div className='p-4 flex-1 flex flex-col'>
         <h3 className='text-xl font-bold'>{title}</h3>
         <p className='text-gray-600 flex-1'>{description}</p>
