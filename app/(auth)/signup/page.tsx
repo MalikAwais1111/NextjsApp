@@ -1,4 +1,6 @@
+'use client'
 import Link from 'next/link';
+import { signIn } from 'next-auth/react';
 
 const Signup = () => {
   return (
@@ -39,7 +41,7 @@ const Signup = () => {
               placeholder="Password"
             />
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mb-4">
             <button
               type="submit"
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -53,6 +55,16 @@ const Signup = () => {
             </Link>
           </div>
         </form>
+
+        {/* Sign up with Google */}
+        <div className="flex items-center justify-center mt-4">
+          <button
+            onClick={() => signIn('google')}
+            className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Sign Up with Google
+          </button>
+        </div>
       </div>
     </div>
   );

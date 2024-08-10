@@ -4,6 +4,7 @@ import '../app/globals.css'
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import ReactQueryProvider from "./utils/providers/page";
+import SessionWrapper from "./components/SessionWraper";
 // import { Provider } from "react-redux";
 // import { store } from "./_liab/store";
 import { StoreProvider } from "./storeprovider";
@@ -29,13 +30,15 @@ export default function RootLayout({
         />
       </head>
       <body className={rubik.className}>
-      <StoreProvider>
-        <Navbar/>
-        <ReactQueryProvider>
-        {children}
-        </ReactQueryProvider>
-        </StoreProvider>
-        <Footer/>
+        <SessionWrapper>
+          <StoreProvider>
+            <Navbar/>
+            <ReactQueryProvider>
+            {children}
+            </ReactQueryProvider>
+            </StoreProvider>
+            <Footer/>
+        </SessionWrapper>
       </body>
     </html>
   );
